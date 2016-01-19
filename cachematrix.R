@@ -1,7 +1,13 @@
-## Put comments here that give an overall description of what your
-## functions do
+## makeCacheMatrix and cacheSolve takes a matrix, inverses 
+## the matrix, then solves the Inverse of the Matrix.
 
-## Write a short comment describing this function
+## Function inverses a square matrix.
+## q <- matrix(c(4,2,7,6), nrow = 2, ncol = 2)
+##      [,1] [,2]
+## [1,]    4    7
+## [2,]    2    6
+## mat <- makeCacheMatrix(matrix(q,nrow=2))
+
 
 makeCacheMatrix <- function(x = matrix()){
   s <- NULL
@@ -19,7 +25,11 @@ makeCacheMatrix <- function(x = matrix()){
 }
 
 
-## Write a short comment describing this function
+## This function caches the matrix created by makeCacheMatrix
+## and solves the matrix. Result should be:
+##      [,1] [,2]
+## [1,]  0.6 -0.7
+## [2,] -0.2  0.4
 
 cacheSolve <- function(x, ...){
   s <- x$getinv()
